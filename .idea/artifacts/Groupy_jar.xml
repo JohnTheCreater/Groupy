@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Groupy:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Groupy_jar</output-path>
+    <root id="archive" name="Groupy.jar">
+      <element id="module-output" name="Groupy" />
+    </root>
+  </artifact>
+</component>
