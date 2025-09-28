@@ -1,5 +1,4 @@
 import java.io.*;
-import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -10,16 +9,14 @@ import java.util.concurrent.ConcurrentHashMap;
 public class Server {
 
     private ServerSocket serverSocket;
-    public static final int port = Integer.parseInt(System.getenv().getOrDefault("PORT", "10000"));
+    public static final int port = 5500;
 
     Map<Client, BufferedWriter> writers;
 
     public Server() throws IOException {
 
 
-        serverSocket = new ServerSocket();
-        serverSocket.bind(new InetSocketAddress("0.0.0.0", port));
-
+        serverSocket = new ServerSocket(port);
         writers = new ConcurrentHashMap<>();
 
     }

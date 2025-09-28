@@ -48,7 +48,7 @@ public class TestClientGUI extends JFrame {
 
 
         try {
-            socket = new Socket("groupy-dvq0.onrender.com", 5500);
+            socket = new Socket("localhost", 5500);
             writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
             reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
