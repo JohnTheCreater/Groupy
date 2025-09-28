@@ -12,6 +12,7 @@ public class TestClientGUI extends JFrame {
     private JTextField inputField;
 
     public TestClientGUI () {
+
         setTitle("Groupy Chat");
         setSize(400, 500);
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
@@ -45,8 +46,9 @@ public class TestClientGUI extends JFrame {
         add(bottomPanel, BorderLayout.SOUTH);
 
 
+
         try {
-            socket = new Socket("localhost", 5500);
+            socket = new Socket("groupy-dvq0.onrender.com", 5500);
             writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
             reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
